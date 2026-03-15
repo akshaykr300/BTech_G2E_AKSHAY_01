@@ -2,14 +2,23 @@
 
 int main() {
     char ch;
-    printf("enter the character to check vowel : ");
-    scanf("%c",&ch);
-    
-    if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' || ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U') {
-        printf("the character is vowel");
+
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    if(ch >= 'a' && ch <= 'z')
+    {
+        ch = ch - 32;   // convert to uppercase
+        printf("Uppercase: %c", ch);
     }
-    else{
-        printf("the charcter is consonent");
+    else if(ch >= 'A' && ch <= 'Z')
+    {
+        ch = ch + 32;   // convert to lowercase
+        printf("Lowercase: %c", ch);
+    }
+    else
+    {
+        printf("Not an alphabet");
     }
 
     return 0;
