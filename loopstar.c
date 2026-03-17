@@ -1,20 +1,20 @@
+#include <stdio.h>
+
 int main() {
-    int a,b,c;
-    printf("enter first no \n");
-    scanf("%d",&a);
-     printf("enter second no \n");
-    scanf("%d",&b);
-     printf("enter third no \n");
-    scanf("%d",&c);
-    
-    if(a>b && a>c) {
-        printf("the biggest number is a");
-    } 
-    else if(b>a && b>c) {
-        printf("the biggest number is b");
-    }
-    else{
-        printf("the biggest number is c");
+    int i, j, rows;
+
+    // Prompt user for the number of rows
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    // Outer loop to handle the number of rows
+    for (i = 1; i <= rows; i++) {
+        // Inner loop to handle the number of stars in each row
+        for (j = 1; j <= i; j++) {
+            printf("*");
+        }
+        // Move to the next line after printing all stars in the current row
+        printf("\n");
     }
 
     return 0;
